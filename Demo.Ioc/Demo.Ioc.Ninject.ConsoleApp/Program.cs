@@ -17,18 +17,12 @@ namespace Demo.Ioc.Ninject.ConsoleApp
 		}
 	}
 
-	public class ShopperModule : INinjectModule
+	public class ShopperModule : NinjectModule
 	{
-		public IKernel Kernel { get; } = new StandardKernel();
-		public string Name { get; } = "ShopperModule";
-
-		public void OnLoad(IKernel kernel)
+		public override void Load()
 		{
-			kernel.Bind<ICreditCard>().To<MasterCard>().Named("Master");
+			Bind<ICreditCard>().To<MasterCard>().Named("Master");
 		}
-
-		public void OnUnload(IKernel kernel) {}
-		public void OnVerifyRequiredModules() {}
 	}
 
 
