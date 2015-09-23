@@ -22,6 +22,7 @@ namespace Demo.Ioc.Ninject.ConsoleApp
 		public override void Load()
 		{
 			Bind<ICreditCard>().To<MasterCard>().Named("Master");
+			Bind<ICreditCard>().To<VisaCard>().Named("Visa");
 		}
 	}
 
@@ -33,7 +34,7 @@ namespace Demo.Ioc.Ninject.ConsoleApp
 	{
 		public ICreditCard CreditCard { get; set; }
 
-		public Shopper(ICreditCard creditCard)
+		public Shopper([Named("Visa")]ICreditCard creditCard)
 		{
 			CreditCard = creditCard;
 		}
