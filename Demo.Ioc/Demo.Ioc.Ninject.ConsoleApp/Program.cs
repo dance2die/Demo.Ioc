@@ -9,6 +9,7 @@ namespace Demo.Ioc.Ninject.ConsoleApp
 		{
 			var kernel = new StandardKernel();
 			kernel.Bind<ICreditCard>().To<MasterCard>();
+			kernel.Bind<ICreditCard>().To<VisaCard>();
 
 			var shopper = kernel.Get<Shopper>();
 			shopper.Charge();
