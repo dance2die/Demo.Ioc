@@ -1,5 +1,6 @@
 ﻿using System;
 using Ninject;
+using Ninject.Modules;
 
 namespace Demo.Ioc.Ninject.ConsoleApp
 {
@@ -7,9 +8,7 @@ namespace Demo.Ioc.Ninject.ConsoleApp
 	{
 		public static void Main(string[] args)
 		{
-			var kernel = new StandardKernel();
-			kernel.Bind<ICreditCard>().To<MasterCard>();
-			kernel.Bind<ICreditCard>().To<VisaCard>();
+			var kernel = new StandardKernel(new ShopperModule());
 
 			var shopper = kernel.Get<Shopper>();
 			shopper.Charge();
@@ -17,6 +16,21 @@ namespace Demo.Ioc.Ninject.ConsoleApp
 			Console.Read();
 		}
 	}
+
+	public class ShopperModule : INinjectModule
+	{
+		public IKernel Kernel { get; } = new StandardKernel();
+		public string Name { get; } = "ShopperModule";
+
+		public void OnLoad(IKernel kernel)
+		{
+			kernel.Bind<ICreditCard>().To<MasterCard>().Named("Master");
+		}
+
+		public void OnUnload(IKernel kernel) {}
+		public void OnVerifyRequiredModules() {}
+	}
+
 
 	/// <summary>
 	/// http://www.pluralsight.com/courses/inversion-of-control
