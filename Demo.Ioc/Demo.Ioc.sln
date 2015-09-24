@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Ioc.Ninject.ConsoleApp", "Demo.Ioc.Ninject.ConsoleApp\Demo.Ioc.Ninject.ConsoleApp.csproj", "{010993B8-6224-4B7B-8CBB-1E582B9951CB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Ioc.Unity.ConsoleApp", "Demo.Ioc.Unity.ConsoleApp\Demo.Ioc.Unity.ConsoleApp.csproj", "{EC58372C-B7B7-47D7-B352-1127A2B09BC6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{010993B8-6224-4B7B-8CBB-1E582B9951CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{010993B8-6224-4B7B-8CBB-1E582B9951CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{010993B8-6224-4B7B-8CBB-1E582B9951CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC58372C-B7B7-47D7-B352-1127A2B09BC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC58372C-B7B7-47D7-B352-1127A2B09BC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC58372C-B7B7-47D7-B352-1127A2B09BC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC58372C-B7B7-47D7-B352-1127A2B09BC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
