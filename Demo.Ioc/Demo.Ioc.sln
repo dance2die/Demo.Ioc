@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Ioc.Ninject.ConsoleApp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Ioc.Unity.ConsoleApp", "Demo.Ioc.Unity.ConsoleApp\Demo.Ioc.Unity.ConsoleApp.csproj", "{EC58372C-B7B7-47D7-B352-1127A2B09BC6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Ioc.StructureMap.ConsoleApp", "Demo.Ioc.StructureMap.ConsoleApp\Demo.Ioc.StructureMap.ConsoleApp.csproj", "{ED6892F2-7E82-4872-BA9E-18293AE3C25E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EC58372C-B7B7-47D7-B352-1127A2B09BC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC58372C-B7B7-47D7-B352-1127A2B09BC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC58372C-B7B7-47D7-B352-1127A2B09BC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED6892F2-7E82-4872-BA9E-18293AE3C25E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED6892F2-7E82-4872-BA9E-18293AE3C25E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED6892F2-7E82-4872-BA9E-18293AE3C25E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED6892F2-7E82-4872-BA9E-18293AE3C25E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
