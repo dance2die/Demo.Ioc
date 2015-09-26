@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using StructureMap;
 
 namespace Demo.Ioc.StructureMap.ConsoleApp
 {
@@ -10,7 +7,15 @@ namespace Demo.Ioc.StructureMap.ConsoleApp
 	{
 		public static void Main(string[] args)
 		{
+			var container = new Container();
+			container.Configure(x => x.For<ICreditCard>().Use<MasterCard>().Named("master"));
+			container.Configure(x => x.For<ICreditCard>().Use<VisaCard>().Named("visa"));
 
+
+			var shopper = container.GetInstance<Shopper>();
+			shopper.Charge();
+
+			Console.Read();
 		}
 	}
 
