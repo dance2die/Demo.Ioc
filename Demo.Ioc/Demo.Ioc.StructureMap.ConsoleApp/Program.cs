@@ -11,8 +11,10 @@ namespace Demo.Ioc.StructureMap.ConsoleApp
 			container.Configure(x => x.For<ICreditCard>().Use<MasterCard>().Named("master"));
 			container.Configure(x => x.For<ICreditCard>().Use<VisaCard>().Named("visa"));
 
+			var creditCard = container.GetInstance<ICreditCard>("master");
 
-			var shopper = container.GetInstance<Shopper>();
+			//var shopper = container.GetInstance<Shopper>();
+			var shopper = new Shopper(creditCard);
 			shopper.Charge();
 
 			Console.Read();
